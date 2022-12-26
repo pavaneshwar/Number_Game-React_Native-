@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
+
 import { StyleSheet, Text, View } from 'react-native';
+import GameOver from './screens/GameOver';
+import GamePage from './screens/GamePage';
+import StartPage from './screens/StartPage';
+import YouWon from './screens/YouWon';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View >
+      <StartPage/>
+      {/* <GamePage/> */}
+      {/* <YouWon/> */}
+      {/* <GameOver/> */}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+ 
 });

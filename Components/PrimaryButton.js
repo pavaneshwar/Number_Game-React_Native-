@@ -1,14 +1,9 @@
 import { Pressable, Text, View ,StyleSheet} from "react-native";
 
-function PrimaryButton({children}){
-
-    function pressed(){
-        console.log('hi');
-    }
-
+function PrimaryButton({children,press}){
 
     return(
-        <Pressable >
+        <Pressable onPress={press}>
             <View style={styles.button}>
                 <Text style={styles.textBtn}>{children}</Text>
             </View>

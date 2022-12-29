@@ -16,10 +16,17 @@ export default PrimaryButton;
 const styles = StyleSheet.create({
     button:{
         borderWidth:2,
-        width:60, 
+        width:90,
+        height:40, 
         borderRadius:10,
+        margin:5,
+        backgroundColor:'black',
+        justifyContent:"space-around"
     },
     textBtn:{
         textAlign:"center",
+        color:'#ffbd03',
+        fontWeight:"bold",
+        fontSize:16
     }
 });

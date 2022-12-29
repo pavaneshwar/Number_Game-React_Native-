@@ -29,12 +29,15 @@ function StartPage({onUserNumber}){
 
     return(
         <View style={styles.StartPage}>
-            <Text style={{fontSize:20}}> Find The Number Game</Text>
+            <Text style={{fontSize:20,textAlign:'center',padding:6,fontFamily:"serif"}}> Find The Number Game</Text>
             <View style={styles.body} >
                 <TextInput style={styles.numberArea} maxLength={2} keyboardType="number-pad" onChangeText={numberInput} value={enteredNumber}/>
-                <PrimaryButton press={checkSaveNumber}>Lock It</PrimaryButton>
+            </View>
+            <View style={styles.btnsContainer}>
+                <PrimaryButton press={checkSaveNumber}>Lock Karo</PrimaryButton>
                 <PrimaryButton press={reset}>Reset</PrimaryButton>
             </View>
+            
         </View>
     );
 }
@@ -42,32 +45,39 @@ function StartPage({onUserNumber}){
 export default StartPage;
 
 const styles = StyleSheet.create({
-    numberArea:{
-        borderBottomWidth:2,
-        borderBottomColor:'red',
-        width:30,
-        textAlign:'center',
-        marginBottom:10,
-        alignSelf:"center",
-        fontSize:20
-    },
     StartPage:{
-        marginTop:50,
-        width:300,
-        height:150,
-        alignItems:"center",
+        marginTop:150,
+        width:350,
+        height:250,
         backgroundColor:'yellow',
         borderRadius:10,
-        elevation:10
+        elevation:10, 
+        alignItems:"center",
+        justifyContent:"space-evenly"
     },
     body:{
         alignSelf:"center",
         alignItems:"center",
         backgroundColor:'grey',
-        width:100,
+        width:250,
         height:100,
         borderRadius:20,
         elevation:5,
-    }
+        justifyContent:"space-around"
+    },
+    numberArea:{
+        marginTop:5,
+        paddingBottom:2,
+        width:70,
+        textAlign:'center',
+        marginBottom:7,
+        fontSize:50,
+        fontWeight:"bold",
+        color:"yellow"
+    },
+    btnsContainer:{
+        flexDirection:'row',
+        margin:8
+    },
 });
 

@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,SafeAreaView } from 'react-native';
+import {LinearGradient} from 'expo-linear-gradient';
 import GameOver from './screens/GameOver';
 import GamePage from './screens/GamePage';
 import StartPage from './screens/StartPage';
@@ -15,18 +16,23 @@ export default function App() {
   let screen=<StartPage onUserNumber={userNumberhandler}/>
 
   if(givenNumber){
-     screen=<GamePage/>
+     screen=<GamePage kuduthaNumber={givenNumber}/>
   }
 
   return (
-    <View>
-      {screen}
+    
+    <LinearGradient colors={["#ff7c25","#ffffff","#01ff2c"]} style={styles.container}>
+      <SafeAreaView>{screen}</SafeAreaView>
       {/* <YouWon/> */}
       {/* <GameOver/> */}
-    </View>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
- 
+  container:{
+    alignItems:"center",
+    
+    flex:1,
+  },
 });

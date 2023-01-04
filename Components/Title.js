@@ -12,12 +12,18 @@ export default Title;
 
 const styles = StyleSheet.create({
     text:{
-        fontSize:20,
+        fontSize:25,
+        fontWeight:"bold",
         margin:15,
-        borderColor:"red",
-        borderWidth:2,
+        borderColor:"#0a07075b",
+        borderWidth:4,
         borderRadius:20,
-        padding:7,
-        textAlign:"center"
-       }
+        paddingTop:8,
+        paddingVertical:6,
+        textAlign:"center",
+        backgroundColor:"#fda31dff",
+        width:350,
+        justifyContent:'center',
+        color:"#920000"
+       },
 });

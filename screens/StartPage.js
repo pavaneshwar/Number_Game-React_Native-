@@ -49,16 +49,17 @@ const styles = StyleSheet.create({
         marginTop:150,
         width:350,
         height:250,
-        backgroundColor:'yellow',
+        backgroundColor:'#ffee00',
         borderRadius:10,
         elevation:10, 
         alignItems:"center",
-        justifyContent:"space-evenly"
+        justifyContent:"space-evenly",
+        alignSelf:"center"
     },
     body:{
         alignSelf:"center",
         alignItems:"center",
-        backgroundColor:'grey',
+        backgroundColor:'#0b0c00ff',
         width:250,
         height:100,
         borderRadius:20,
